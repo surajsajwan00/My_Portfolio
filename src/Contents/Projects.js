@@ -2,9 +2,13 @@ import 'animate.css';
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
 import bts from "../Assets/img/Project/tracking_system.png";
+import aps from "../Assets/img/Project/Automated parking system.png";
 import ds from "../Assets/img/Project/digital seganography.png";
-import ra from "../Assets/img/Project/rider app.jpg";
+import ra from "../Assets/img/Project/rider app.png";
 import pronlp from "../Assets/img/Project/NLP product.png";
+import srs from "../Assets/img/Project/Speech Emotion Recognition.png";
+import hgr from "../Assets/img/Project/Hand Gesture Recognition.png";
+import iu from "../Assets/img/Project/image upscaling.png";
 import backside1 from "../Assets/img/bg-left.jpg";
 import backside2 from "../Assets/img/bg-right.jpg";
 import TrackVisibility from 'react-on-screen';
@@ -25,19 +29,46 @@ export const Projects = () => {
       githubUrl: "https://github.com/surajsajwan00/Bus-Tracking-system",
     },
     {
-      title: "Digital Steganography",
-      description: "A cutting-edge hybrid steganography solution ensures solid data security for text, images, and handwritten language by discreetly inserting important information, successfully safeguarding it against potential cyber threats",
-      imgUrl: ds,
-      githubUrl: "https://github.com/surajsajwan00/Digital-Steganography-Using-JAVA",
+      title: "Automated Parking System",
+      description: "Developed a CNN-based ALPR model and a smart parking allocation algorithm to optimize space utilization and reduce traffic in automated parking systems. Enhanced user experience with real-time email notifications for parking space availability",
+      imgUrl: aps,
+      githubUrl: "https://github.com/surajsajwan00/Automated-parking-system",
     },
   ];
 
   const projects2 = [
     {
+      title: "Digital Steganography",
+      description: "A cutting-edge hybrid steganography solution ensures solid data security for text, images, and handwritten language by discreetly inserting important information, successfully safeguarding it against potential cyber threats",
+      imgUrl: ds,
+      githubUrl: "https://github.com/surajsajwan00/Digital-Steganography-Using-JAVA",
+    },
+    {
       title: "Rider App",
       description: "This is a flutter application maintains rider records",
       imgUrl: ra,
       githubUrl: "https://github.com/surajsajwan00/rider_app",
+    },
+    {
+      title: "Speech Emotion Recognition",
+      description: "Speech Emotion Recognition (SER) aims to identify human emotions and affective states through speech by analyzing tone and pitch. This technology leverages the natural phenomenon used by animals like dogs and horses to understand human emotions",
+      imgUrl: srs,
+      githubUrl: "https://github.com/surajsajwan00/Speech-emotion-recognition",
+    },
+  ];
+
+  const projects3 = [
+    {
+      title: "Custom Hand Gesture Recognition",
+      description: "Developed a Custom Hand Gesture Recognition system using Convolutional Neural Networks (CNN) to enable intuitive and seamless human-computer interaction, enhancing user experience and expanding the possibilities of gesture-based controls",
+      imgUrl: hgr,
+      githubUrl: "https://github.com/surajsajwan00/PRAD-2024/tree/main/Hand%20Gesture%20Recognition",
+    },
+    {
+      title: "Image Upscaling",
+      description: "Developed an advanced Image Upscaling system utilizing Generative Adversarial Networks (GANs) to enhance image resolution and detail, delivering superior visual quality and transforming the way images are experienced",
+      imgUrl: iu,
+      githubUrl: "https://github.com/surajsajwan00/PRAD-2024/blob/main/Image%20Upscaling/Image-upscaling%20using%20GAN.ipynb",
     },
   ];
 
@@ -91,7 +122,17 @@ export const Projects = () => {
                       </Row>
                     </Tab.Pane>
                     <Tab.Pane eventKey="third">
-                      <p>More Projects Coming Soon</p>
+                    <Row>
+                        {
+                          projects3.map((project, index) => {
+                            return (
+                              <Col key={index} md={6} lg={4} className="mb-4">
+                              <ProjectCard {...project} />
+                            </Col>
+                            )
+                          })
+                        }
+                      </Row>
                     </Tab.Pane>
                   </Tab.Content>
                 </Tab.Container>

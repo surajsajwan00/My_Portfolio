@@ -64,7 +64,7 @@ export const Banner = () => {
                     </button>
                   <button onClick={() => {
                     const link = document.createElement('a');
-                    link.href = 'https://drive.google.com/file/d/1uNjAYKaPw2E2J4gDBDqY6aR41HBCXTPU/view?usp=sharing'; 
+                    link.href = 'https://drive.google.com/file/d/1OjovOlz7Ai-2Q9kt5YFHS3Fr1xhykgu0/view?usp=sharing'; 
                     link.download = 'Surajsinghsajwan_Resume.pdf'; 
                     document.body.appendChild(link);
                     link.click();
